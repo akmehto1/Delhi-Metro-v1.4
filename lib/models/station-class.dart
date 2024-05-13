@@ -22,8 +22,6 @@ List<Station> parseJsonToStationList() {
   jsonMap.forEach((key, value) {
     final name = value["name"] as String;
     final line = (value["line"] as List).cast<String>();
-    // final dist = value["dist"] as double;
-    // print("${name}  ${dist}");
     final station = Station(name, line);
     stationList.add(station);
   });
@@ -35,15 +33,3 @@ List<Station> parseJsonToStationList() {
 }
 
 
-
-
-//
-// void main() {
-//   final List<Station> stations = parseJsonToStationList(jsonStr);
-//   for (final station in stations) {
-//     print("Name: ${station.name}");
-//     print("Line: ${station.line}");
-//     print("Distance: ${station.dist}");
-//     print("\n");
-//   }
-// }

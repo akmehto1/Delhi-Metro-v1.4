@@ -36,7 +36,6 @@ class HomeProvider with ChangeNotifier{
 
 
     Future.delayed(const Duration(seconds: 2), () {
-
       Navigator.push(
           context,
         MaterialPageRoute(

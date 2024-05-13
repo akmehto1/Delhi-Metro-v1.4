@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:delhimetrov/ui/Home/home-body.dart';
+import 'package:delhimetrov/ui/alaram/alaram.dart';
 import 'package:delhimetrov/ui/map/map-page.dart';
 
 import 'package:flutter/material.dart';
@@ -62,12 +63,7 @@ class _HomeViewState extends State<HomeView> {
       controller: _controller,
       children: [
         HomeBody(),
-        Container(
-          color: Colors.red,
-          child: Center(
-            child: Text('Page 2'),
-          ),
-        ),
+        AlaramPage(),
         Container(
           color: Colors.green,
           child: Center(

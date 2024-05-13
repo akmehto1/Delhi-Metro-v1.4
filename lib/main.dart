@@ -1,3 +1,4 @@
+import 'package:delhimetrov/provider/alaram_provider.dart';
 import 'package:delhimetrov/provider/homeprovider.dart';
 import 'package:delhimetrov/ui/Home/home.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
     ChangeNotifierProvider(
     create: (context) => HomeProvider(),
     ),
+          ChangeNotifierProvider(create:(context)=>AlaramProvider())
     ],
     child:MaterialApp(
       title: 'Flutter Demo',
