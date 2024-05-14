@@ -5,6 +5,7 @@ import 'package:delhimetrov/ui/alaram/alaram.dart';
 import 'package:delhimetrov/ui/map/map-page.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -43,7 +44,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar:AppBar(
         actions: [
-          IconButton(onPressed:(){}, icon:Icon(Icons.access_alarms_rounded))
+
         ],
         title:Row(
           mainAxisAlignment:MainAxisAlignment.center,
@@ -63,7 +64,7 @@ class _HomeViewState extends State<HomeView> {
       controller: _controller,
       children: [
         HomeBody(),
-        AlaramPage(),
+        WithForegroundTask(child:AlaramPage()),
         Container(
           color: Colors.green,
           child: Center(

@@ -1,10 +1,17 @@
 import 'package:delhimetrov/provider/alaram_provider.dart';
 import 'package:delhimetrov/provider/homeprovider.dart';
+import 'package:delhimetrov/services/ForegroundTaskService.dart';
 import 'package:delhimetrov/ui/Home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Request for permissions that you need
+  Permission.location.request();
+  ForegroundTaskService.init();
   runApp(const MyApp());
 }
 
@@ -29,7 +36,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home:HomeView(),
+      home:const WithForegroundTask(child:HomeView()),
     ));
   }
 }

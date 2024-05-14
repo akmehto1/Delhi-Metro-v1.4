@@ -43,6 +43,9 @@ dependencies:
   geolocator: ^10.0.1
   vibration: ^1.8.3
   permission_handler: ^11.3.1
+  flutter_foreground_task: ^6.2.0
+  awesome_notifications: ^0.9.3+1
+  flutter_blue_plus: ^1.32.6
 
 dev_dependencies:
   flutter_test:
